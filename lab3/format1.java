@@ -1,6 +1,5 @@
 package lab3;
 
-// Класс для конвертации из рублей, слизан с первой задачи
 
 public class format1 {
     private double x;

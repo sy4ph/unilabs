@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Zadanie8 {
+public class task8 {
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -32,5 +32,6 @@ public class Zadanie8 {
         for (int i=0; i<a.length; i++){
             System.out.print(a[i]);
         }
+        scanner.close();
     }
 }

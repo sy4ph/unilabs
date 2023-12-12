@@ -1,19 +1,21 @@
 
 import java.util.Scanner;
 
-public class Zadanie4 {
+public class task4 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите величену массива: ");
+        System.out.println("Enter array length: ");
         int n = scanner.nextInt();
-        if (n == 0) return;
-
+        if (n == 0) {
+            scanner.close();
+            return;
+        }
         int[] b = new int[n];
 
         for (int i = 0; i < b.length; i++) {
-            System.out.println("Введите элемент " + (i+1) + ": ");
+            System.out.println("Enter a number " + (i+1) + ": ");
             b[i] = scanner.nextInt();
         }
 
@@ -35,13 +37,14 @@ public class Zadanie4 {
             if (b[i] > max) max = b[i];
         }
 
-        System.out.println("Сумма: ");
+        System.out.println("Sum: ");
         System.out.println(sum);
 
-        System.out.println("Минимальное: ");
+        System.out.println("Minimum: ");
         System.out.println(min);
 
-        System.out.println("Максимальное: ");
+        System.out.println("Maximum: ");
         System.out.println(max);
+        scanner.close();
     }
 }

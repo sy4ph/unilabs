@@ -1,20 +1,20 @@
 
 import java.util.Scanner;
 
-public class Zadanie3 {
+public class task3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите величену массива: ");
+        System.out.println("Enter array length: ");
         int n = scanner.nextInt();
         int[] b = new int[n];
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Введите элемент " + (i+1) + ": ");
+            System.out.println("Enter a number " + (i+1) + ": ");
             b[i] = scanner.nextInt();
         }
-
+        scanner.close();
         int sum = 0;
         for (int i = 0; i < n; i++) {
             sum += b[i];
@@ -22,9 +22,9 @@ public class Zadanie3 {
 
         int sred = sum / b.length;
 
-        System.out.println("Сумма: ");
+        System.out.println("Sum: ");
         System.out.println(sum);
-        System.out.println("Среднее значение: ");
+        System.out.println("Average: ");
         System.out.println(sred);
 
     }

@@ -2,14 +2,16 @@ package lab2;
 
 import java.util.Scanner;
 
-public class Zadanie10 {
+public class task10 {
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
 
         String str = scanner.nextLine();
-        if (str == "") return;
-
+        if (str == "") {
+            scanner.close();
+            return;
+        }
         int n = 1;
 
         for (int i = 0; i < str.length(); i++) {
@@ -17,5 +19,6 @@ public class Zadanie10 {
         }
 
         System.out.println(n);
+        scanner.close();
     }
 }

@@ -11,7 +11,7 @@ public class obolochki1 {
         Double b = Double.valueOf(6.3);
         Double c = Double.valueOf(-10.37);
 
-        System.out.println("Введите число: ");
+        System.out.println("Input a number: ");
         String str = scanner.nextLine();
 
         String result = "";
@@ -36,5 +36,6 @@ public class obolochki1 {
 
         String d = Double.toString(3.14);
         System.out.println(d);
+        scanner.close();
     }
 }

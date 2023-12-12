@@ -7,13 +7,13 @@ public class format2tester {
         format2 market = new format2(45000, 25000, 2000);
 
         market.addComputer();
-        System.out.println("Компьютер = " + market.finalCost() + " руб");
+        System.out.println("КComputer = " + market.finalCost() + " rub");
         market.addMobilePhone();
-        System.out.println("+ Телефон = " + market.finalCost() + " руб");
+        System.out.println("+ Phone = " + market.finalCost() + " rub");
         market.addKeyBoard();
-        System.out.println("+ Клавиатура = " + market.finalCost() + " руб");
+        System.out.println("+ Keyboard = " + market.finalCost() + " rub");
 
         format1 ruble = new format1(market.finalCost());
-        System.out.printf("\nИтог:\nДоллары: %.2f\nЕвро: %.2f\nФунты стерлингов: %.2f", ruble.getInDollars(), ruble.getInEuro(), ruble.getInIbs());
+        System.out.printf("\nSumг:\nUSD: %.2f\nEUR: %.2f\nGBP: %.2f", ruble.getInDollars(), ruble.getInEuro(), ruble.getInIbs());
     }
 }

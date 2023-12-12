@@ -25,7 +25,7 @@ public class format2 {
     public double finalCost() {return basket;}
 
     public void cleanBasket() {
-        System.out.println("\nКорзина очищена.");
+        System.out.println("\nBin emptied.");
         this.basket = 0;
     }
 }

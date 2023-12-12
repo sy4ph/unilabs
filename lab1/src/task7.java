@@ -1,11 +1,12 @@
 
 import java.util.Scanner;
-public class Zadanie7 {
+public class task7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите число: ");
+        System.out.println("Input a number: ");
         int n = scanner.nextInt();
+        scanner.close();
         if (n == 0) return;
 
         System.out.println(Factorial.factorial(n));

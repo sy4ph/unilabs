@@ -16,9 +16,9 @@ public class format1tester {
     public static void main(String[] args) {
         Scanner source = new Scanner(System.in);
 
-        System.out.println("Введите количество самой стабильной валюты в мире: ");
+        System.out.println("Enter rubles amount: ");
         format1tester ruble = new format1tester(source.nextDouble());
-
-        System.out.printf("Доллары: %.2f\nЕвро: %.2f\nФунты стерлингов: %.2f", ruble.getInDollars(), ruble.getInEuro(), ruble.getInIbs());
+        source.close();
+        System.out.printf("USD: %.2f\nEUR: %.2f\nGBP: %.2f", ruble.getInDollars(), ruble.getInEuro(), ruble.getInIbs());
     }
 }

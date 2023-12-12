@@ -1,5 +1,5 @@
 
-public class Zadanie6 {
+public class task6 {
     public static void main(String[] args) {
 
         float b = 10;

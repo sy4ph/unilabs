@@ -1,6 +1,5 @@
 package lab3;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class zadanie3 {
@@ -24,7 +23,7 @@ public class zadanie3 {
         }
 
         if (flag) {
-            System.out.println("\nCтрого возрастающая последовательность");
+            System.out.println("\nSequence is ascending");
         }
 
     }

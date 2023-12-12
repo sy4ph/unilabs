@@ -1,6 +1,6 @@
 package lab2;
 
-public class Zadanie1Tester {
+public class task1 {
     public static void main(String[] args) {
         Author bob = new Author("Bob", "bob@ru", "male");
 
