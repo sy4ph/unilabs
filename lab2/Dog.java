@@ -12,10 +12,6 @@ public class Dog {
         this.age = age;
     }
 
-    /*public static void main(String[] args){
-        Dog shy = new Dog('shy', 3);
-        Dog pew = new Dog('pew', 5);
-    }*/
     public void humanyoar(){
         System.out.println( );
     }

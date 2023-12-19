@@ -28,5 +28,6 @@ public class zadanie2 {
         } else {
             System.out.println("Настоящее");
         }
+        scanner.close();
     }
 }

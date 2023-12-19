@@ -20,7 +20,7 @@ public class task3 {
             sum += b[i];
         }
 
-        int sred = sum / b.length;
+        double sred = sum / b.length;
 
         System.out.println("Sum: ");
         System.out.println(sum);
