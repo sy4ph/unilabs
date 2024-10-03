@@ -1,0 +1,12 @@
+{
+    "users" : {
+        "user1" : {
+            "password" : "password1",
+            "token" : "Gdsnfj34klasd6Vr3",
+            "tasks" : {
+
+            }
+        }
+
+        }
+}
