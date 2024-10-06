@@ -1,5 +1,6 @@
 import json
 import os
+import flask
 
 token = False
 data = json.load(open(os.path.join(os.path.dirname(__file__), 'data.json')))
@@ -33,6 +34,14 @@ def add_user(username, password):
     json.dump(data, open(os.path.join(os.path.dirname(__file__), 'data.json'), 'w'))
     return True
 
+def change_task_status():
+    taskname = input("Task name: ")
+    if taskname in data['users'][get_user(token)]["tasks"]:
+        status = input("Set task status: ")
+        data['users'][get_user(token)]["tasks"][taskname]["status"] = status
+    else:
+        print("No such task")
+
 def add_task():
     taskname = input("Task name: ")
     task = input("Task: ")
@@ -46,7 +55,7 @@ def add_task():
             print("Priority must be an integer, bozo")
             continue
         break
-    data['users'][get_user(token)]["tasks"][taskname] = {"task": task, "deadline": deadline, "priority": priority}
+    data['users'][get_user(token)]["tasks"][taskname] = {"task": task, "deadline": deadline, "priority": priority, "status": "Not started"}
 
 def remove_task():
     taskname = input("Task name: ")
@@ -80,6 +89,8 @@ while True:
             remove_task()
         case "view":
             view_tasks()
+        case "status":
+            change_task_status()
         case "exit":
             break
         case "help":
