@@ -14,7 +14,9 @@ jwt = JWTManager(app)
 db = json.load(open(os.path.join(os.path.dirname(__file__), "tasks.json")))
 def save_db():
     json.dump(db, open(os.path.join(os.path.dirname(__file__), "tasks.json"), "w"))
-
+def reload_db():
+    global db
+    db = json.load(open(os.path.join(os.path.dirname(__file__), "tasks.json")))
 @app.route("/register", methods = ['POST'])
 def register():
     data = request.get_json()
@@ -55,6 +57,7 @@ def reread():
 @jwt_required()
 def get_tasks():
     #pagination
+    reload_db()
     page = int(request.args.get('page', 1))
     limit = int(request.args.get('limit', 10))
     start = (page - 1) * limit
