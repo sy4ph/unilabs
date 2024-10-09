@@ -117,7 +117,7 @@ def add_task():
 @jwt_required()
 def get_task(task_id):
     user_id = get_jwt()["sub"]
-    if task_id < 1 or task_id > len(db["users"][user_id]['tasks']):
+    if task_id > len(db["users"][user_id]['tasks']):
         return jsonify({"error" : "Not found"}), 404
     return jsonify(db["users"][user_id]['tasks'][task_id]), 200
 
@@ -127,13 +127,15 @@ def update_task(task_id):
     user_id = get_jwt()["sub"]
     data = request.get_json()
     db["users"][user_id]['tasks'][task_id] = data
+    save_db()
     return jsonify({"message" : "Successful"}), 200
 
 @app.route("/tasks/<int:task_id>", methods = ['DELETE'])
 @jwt_required()
 def delete_task(task_id):
     user_id = get_jwt()["sub"]
-    del db ["users"][user_id]['tasks'][str(task_id)]
+    del db["users"][user_id]['tasks'][str(task_id)]
+    save_db()
     return jsonify({"message" : "Successful"}), 204
 
 @jwt.unauthorized_loader
